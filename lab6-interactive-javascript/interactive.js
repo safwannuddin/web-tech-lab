@@ -44,7 +44,12 @@ function addTodo() {
     const text = input.value.trim();
     
     if (text === '') {
-        alert('Please enter a task!');
+        input.style.borderColor = '#dc3545';
+        input.placeholder = 'Please enter a task!';
+        setTimeout(() => {
+            input.style.borderColor = '';
+            input.placeholder = 'Enter a new task...';
+        }, 2000);
         return;
     }
     
@@ -126,12 +131,12 @@ function closeModal() {
 }
 
 // Close modal when clicking outside
-window.onclick = function(event) {
+document.addEventListener('click', function(event) {
     const modal = document.getElementById('modal');
     if (event.target === modal) {
         closeModal();
     }
-}
+});
 
 // Counter
 let counterValue = 0;

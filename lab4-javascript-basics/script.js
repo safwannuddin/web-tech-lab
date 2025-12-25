@@ -113,7 +113,13 @@ function updateDisplay() {
     if (text) {
         document.getElementById('displayArea').innerHTML = text;
     } else {
-        alert('Please enter some text!');
+        let input = document.getElementById('textInput');
+        input.style.borderColor = 'red';
+        input.placeholder = 'Please enter some text!';
+        setTimeout(() => {
+            input.style.borderColor = '';
+            input.placeholder = 'Enter text';
+        }, 2000);
     }
 }
 
