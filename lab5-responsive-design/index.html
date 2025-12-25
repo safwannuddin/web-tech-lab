@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 - Responsive Web Design</title>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>ResponsiveSite</h1>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to Responsive Web Design</h2>
+            <p>Resize your browser window to see the magic of responsive design!</p>
+        </div>
+    </section>
+    
+    <section id="about" class="content-section">
+        <div class="container">
+            <h2>About Responsive Design</h2>
+            <div class="grid-2col">
+                <div class="card">
+                    <h3>Mobile First</h3>
+                    <p>Design for mobile devices first, then enhance for larger screens.</p>
+                </div>
+                <div class="card">
+                    <h3>Flexible Layouts</h3>
+                    <p>Use flexible grids and layouts that adapt to screen size.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services" class="content-section gray-bg">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="grid-3col">
+                <div class="card">
+                    <div class="icon">📱</div>
+                    <h3>Mobile Design</h3>
+                    <p>Optimized for smartphones and tablets</p>
+                </div>
+                <div class="card">
+                    <div class="icon">💻</div>
+                    <h3>Desktop Design</h3>
+                    <p>Full-featured desktop experience</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🖥️</div>
+                    <h3>Large Screens</h3>
+                    <p>Enhanced for wide displays</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="content-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><strong>Email:</strong> info@responsive.com</p>
+                    <p><strong>Phone:</strong> (123) 456-7890</p>
+                    <p><strong>Address:</strong> 123 Web Street, Internet City</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Message" rows="4" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Responsive Web Design Lab. All rights reserved.</p>
+            <div class="screen-indicator">
+                <p class="mobile-only">📱 Mobile View</p>
+                <p class="tablet-only">📱 Tablet View</p>
+                <p class="desktop-only">💻 Desktop View</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

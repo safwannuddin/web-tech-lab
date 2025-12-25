@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2 - HTML Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
+        </div>
+        
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+        </div>
+        
+        <div class="form-group">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male" style="display: inline;">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female" style="display: inline;">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other" style="display: inline;">Other</label>
+        </div>
+        
+        <div class="form-group">
+            <label for="course">Select Course:</label>
+            <select id="course" name="course">
+                <option value="">-- Select a Course --</option>
+                <option value="web">Web Development</option>
+                <option value="mobile">Mobile Development</option>
+                <option value="data">Data Science</option>
+                <option value="ai">Artificial Intelligence</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label>Skills (select multiple):</label>
+            <input type="checkbox" id="html" name="skills" value="html">
+            <label for="html" style="display: inline;">HTML</label><br>
+            <input type="checkbox" id="css" name="skills" value="css">
+            <label for="css" style="display: inline;">CSS</label><br>
+            <input type="checkbox" id="js" name="skills" value="js">
+            <label for="js" style="display: inline;">JavaScript</label><br>
+            <input type="checkbox" id="python" name="skills" value="python">
+            <label for="python" style="display: inline;">Python</label>
+        </div>
+        
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        
+        <div class="form-group">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms" style="display: inline;">I agree to the terms and conditions</label>
+        </div>
+        
+        <button type="submit">Register</button>
+        <button type="reset">Clear Form</button>
+    </form>
+</body>
+</html>
