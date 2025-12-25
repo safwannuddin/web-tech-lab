@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6 - Interactive JavaScript</title>
+    <link rel="stylesheet" href="interactive.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive JavaScript Features</h1>
+        <p>Explore various interactive elements and event handlers</p>
+    </header>
+    
+    <main class="container">
+        <!-- Image Gallery -->
+        <section class="section">
+            <h2>1. Image Gallery with Lightbox</h2>
+            <div class="gallery">
+                <div class="gallery-item" onclick="openLightbox(0)">
+                    <div class="placeholder" style="background-color: #ff6b6b;">Image 1</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(1)">
+                    <div class="placeholder" style="background-color: #4ecdc4;">Image 2</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(2)">
+                    <div class="placeholder" style="background-color: #45b7d1;">Image 3</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <div class="placeholder" style="background-color: #f9ca24;">Image 4</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- To-Do List -->
+        <section class="section">
+            <h2>2. To-Do List</h2>
+            <div class="todo-container">
+                <div class="input-group">
+                    <input type="text" id="todoInput" placeholder="Enter a new task..." onkeypress="handleEnter(event)">
+                    <button onclick="addTodo()">Add Task</button>
+                </div>
+                <ul id="todoList"></ul>
+            </div>
+        </section>
+        
+        <!-- Accordion -->
+        <section class="section">
+            <h2>3. Accordion Menu</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(0)">
+                        What is HTML?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of web content.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(1)">
+                        What is CSS?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>CSS (Cascading Style Sheets) is used to style and layout web pages. It controls colors, fonts, spacing, and responsive design.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(2)">
+                        What is JavaScript?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>JavaScript is a programming language that enables interactive web pages. It can update content, control multimedia, and much more.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tab System -->
+        <section class="section">
+            <h2>4. Tab Navigation</h2>
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" onclick="openTab(event, 'tab1')">Profile</button>
+                    <button class="tab-button" onclick="openTab(event, 'tab2')">Settings</button>
+                    <button class="tab-button" onclick="openTab(event, 'tab3')">Messages</button>
+                </div>
+                <div id="tab1" class="tab-content active">
+                    <h3>Profile Information</h3>
+                    <p>View and edit your profile details here.</p>
+                </div>
+                <div id="tab2" class="tab-content">
+                    <h3>Account Settings</h3>
+                    <p>Manage your account preferences and privacy settings.</p>
+                </div>
+                <div id="tab3" class="tab-content">
+                    <h3>Your Messages</h3>
+                    <p>Check your inbox and sent messages.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal -->
+        <section class="section">
+            <h2>5. Modal Dialog</h2>
+            <button onclick="openModal()" class="btn-primary">Open Modal</button>
+        </section>
+        
+        <!-- Counter -->
+        <section class="section">
+            <h2>6. Interactive Counter</h2>
+            <div class="counter">
+                <button onclick="decrementCounter()">-</button>
+                <span id="counterValue">0</span>
+                <button onclick="incrementCounter()">+</button>
+                <button onclick="resetCounter()" class="reset-btn">Reset</button>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="prev" onclick="changeImage(-1); event.stopPropagation()">&#10094;</button>
+            <div id="lightboxImage" class="lightbox-image"></div>
+            <button class="next" onclick="changeImage(1); event.stopPropagation()">&#10095;</button>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2>Welcome!</h2>
+            <p>This is a modal dialog box. Click the X or outside the modal to close it.</p>
+            <button onclick="closeModal()" class="btn-primary">Close</button>
+        </div>
+    </div>
+    
+    <script src="interactive.js"></script>
+</body>
+</html>
