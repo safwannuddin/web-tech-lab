@@ -1,0 +1,44 @@
+ <!-- Program-6: Create a dynamic web page using JavaScript event handling and DOM manipulation. -->
+
+<html>
+<head>
+<title>Event Handling</title>
+<script>
+function showMessage() {
+alert("Page Loaded Successfully");
+}
+function validate() {
+var rn = document.getElementById("roll");
+if (rn.value == "") {
+document.getElementById("lbl").style.color = "red";
+} else {
+document.getElementById("lbl").style.color = "black";
+}
+}
+function mouseOver() {
+document.getElementById("msg").innerHTML =
+"Roll Number: 1604-22-733-177";
+}
+function mouseOut() {
+document.getElementById("msg").innerHTML = "";
+}
+</script>
+</head>
+<body onload="showMessage()">
+<center>
+<h2>Student Enrollment Form</h2>
+<form onsubmit="validate()">
+<label id="lbl">Roll Number</label>
+<input
+type="text"
+id="roll"
+onmouseover="mouseOver()"
+onmouseout="mouseOut()"
+/>
+<div id="msg"></div>
+<br /><br />
+<input type="submit" />
+</form>
+</center>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Marks Memo</title>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+fetch('http://localhost:8080/marks')
+.then(response => response.json())
+.then(data => {
+console.log(data )
+const tableBody = document.getElementById('marks-body');
+data.forEach(d => {
+const row = document.createElement('tr');
+row.innerHTML =
+`<td>${d.id}</td><td>${d.subject}</td><td>${d.imarks}</td><td>${d.emarks}</td>`;
+tableBody.appendChild(row);
+});
+})
+.catch(err => {
+document.getElementById('error').textContent = 'Failed to load marks data.';
+});
+});
+</script>
+</head>
+<body>
+<h1>Student Marks Memo</h1>
+<h4>Roll Number: 1604-22-733-177</h4>
+<div id="error" style="color:red;"></div>
+<table border="2">
+<tr>
+<td>ID</td>
+<td>Subject</td>
+<td>Internal Marks</td>
+<td>External Marks</td>
+</tr>
+<tbody id="marks-body">
+</tbody>
+</table>
+</body>
+</html>

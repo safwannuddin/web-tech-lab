@@ -1,0 +1,23 @@
+<!-- Program-4: Develop a dynamic web page using JavaScript -->
+<html>
+<head>
+<title>Dynamic Page</title>
+</head>
+<body>
+<h2 id="date"></h2>
+<h2 id="greet"></h2>
+<h2 id="lucky"></h2>
+<h2 id="last"></h2>
+<script>
+var d = new Date();
+document.getElementById("date").innerHTML = "Date: " + d;
+if (d.getHours() < 12)
+document.getElementById("greet").innerHTML = "Good Morning";
+else document.getElementById("greet").innerHTML = "Good Afternoon";
+var n = Math.floor(Math.random() * 10);
+document.getElementById("lucky").innerHTML = "Lucky Number: " + n;
+document.getElementById("last").innerHTML =
+"Last Modified: " + document.lastModified;
+</script>
+</body>
+</html>

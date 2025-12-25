@@ -1,0 +1,44 @@
+<!-- Program-5 JavaScript Program to Validate Registration Form -->
+<html>
+<head>
+<title>Form Validation</title>
+<script>
+function validate() {
+var roll = document.getElementById("roll").value;
+if (roll == "") {
+alert("Roll Number cannot be empty");
+return false;
+}
+if (roll.search(/[0-9]{4}-[0-9]{2}-[0-9]{3}-[0-9]{3}$/) != 0) {
+alert("Invalid Roll Number");
+return false;
+}
+var name = document.getElementById("name").value;
+if (name == "" || name.search(/[A-Z a-z]*$/) != 0) {
+alert("Invalid Name");
+return false;
+}
+var ph = document.getElementById("phone").value;
+if (ph.search(/[0-9]{10}$/) != 0) {
+alert("Invalid Phone Number");
+return false;
+}
+var email = document.getElementById("email").value;
+if (email.search(/[A-Z a-z 0-9._]*@[A-Z a-z]*\.[A-Z a-z]*$/) != 0) {
+alert("Invalid Email");
+return false;
+}
+return true;
+}
+</script>
+</head>
+<body>
+<form onsubmit="return validate();">
+Roll No: <input type="text" id="roll" /><br /><br />
+Name: <input type="text" id="name" /><br /><br />
+Phone: <input type="text" id="phone" /><br /><br />
+Email: <input type="text" id="email" /><br /><br />
+<input type="submit" />
+</form>
+</body>
+</htm
