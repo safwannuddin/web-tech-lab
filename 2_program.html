@@ -1,0 +1,122 @@
+<!-- Program-2: Develop a static website using DIV and CSS -->
+<html>
+<head>
+<title>Department Overview</title>
+<style>
+
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Header styling */
+.header {
+    background-color: #2E86C1;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Page layout */
+.main {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+/* Left navigation */
+.left {
+    width: 20%;
+    background-color: #D6EAF8;
+    padding: 15px;
+}
+
+.left a {
+    display: block;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: #1A5276;
+    font-weight: bold;
+}
+
+/* Right content area */
+.right {
+    width: 80%;
+    padding: 15px;
+}
+
+/* Images row */
+.images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.images img {
+    width: 32%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+}
+
+.content-text {
+    font-size: 16px;
+    color: #34495E;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>MJCET</h1>
+    <h2>Department of Computer Science & Engineering</h2>
+    <p>Roll Number: 1604-22-733-177</p>
+</div>
+
+<div class="main">
+
+    <div class="left">
+        <a href="#">Vision</a>
+        <a href="#">Mission</a>
+        <a href="#">Faculty</a>
+        <a href="#">Lab Facilities</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="right">
+        <h2>Welcome to the CSE Department</h2>
+
+        <div class="images">
+            <img src="1.png" alt="Students in Computer Lab">
+            <img src="2.png" alt="Computer Lab Setting">
+            <img src="3.png" alt="Students Group Discussion">
+        </div>
+
+        <div class="content-text">
+            <p>
+                The Computer Science and Engineering (CSE) department at MJCET is dedicated to offering
+                quality education that combines theoretical fundamentals with practical experience.
+            </p>
+            <p>
+                Our curriculum is designed to prepare students for careers in software development,
+                data science, cybersecurity, AI, and research by providing hands-on lab sessions,
+                collaborative projects, and industry exposure.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
