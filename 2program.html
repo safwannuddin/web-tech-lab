@@ -1,0 +1,72 @@
+<!-- Program-2: Develop a static website using DIV and CSS -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Department Overview</title>
+
+<!-- Internal CSS -->
+<style>
+/* Full page wrapper to hold left and right sections */
+.container {
+    width: 100%;
+    display: flex;
+}
+
+/* Header Section */
+.header {
+    background-color:#D4EFDF;
+    text-align:center;
+    padding:20px;
+}
+
+/* Left Menu */
+.left {
+    width:20%;
+    background-color:#D6EAF8;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+/* Right Content Area */
+.right {
+    width:80%;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+/* Basic styling for links */
+a {
+    text-decoration:none;
+    font-size:18px;
+}
+</style>
+
+<!-- External CSS Example -->
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<div class="header">
+    <h1>MJCET</h1>
+    <h2>Department of CSE</h2>
+    <p>Roll Number: 1604-22-733-177</p>
+</div>
+
+<div class="container">
+    <div class="left">
+        <a href="#">Vision</a><br><br>
+        <a href="#">Mission</a><br><br>
+        <a href="#">Faculty</a>
+    </div>
+
+    <div class="right">
+        <img src="2.png" width="400"><br><br>
+        <p>
+            The CSE department provides quality education and practical exposure for students to excel in the field of Computer Science.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
