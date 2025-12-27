@@ -39,6 +39,4 @@ Thumbs.db
 # Package lock if not needed in repo
 package-lock.json
 
-# Generated txt files from FS programs
-myfile1.txt
-myfile4.txt
+
