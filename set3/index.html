@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+
+  <script src="validate.js"></script>
+
+  <style>
+    .box {
+      border: 1px solid black;
+      width: 300px;
+      padding: 15px;
+      margin: auto;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h2 align="center">Student Registration Form</h2>
+
+    <form onsubmit="return validateForm()">
+
+      Name:<br>
+      <input type="text" id="name"><br><br>
+
+      Email:<br>
+      <input type="text" id="email"><br><br>
+
+      Password:<br>
+      <input type="password" id="password"><br><br>
+
+      <input type="submit" value="Register">
+      <input type="reset">
+
+    </form>
+  </div>
+
+</body>
+</html>
