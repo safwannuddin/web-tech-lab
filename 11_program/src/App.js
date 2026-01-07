@@ -4,6 +4,7 @@
 
 import React from "react";
 
+// Main component
 function WebTech() {
   return (
     <div>
@@ -12,33 +13,29 @@ function WebTech() {
 
       <hr />
 
-      {/* PROPS: Display student details */}
-      <h3>Student Details (Props)</h3>
+      {/* Props example */}
       <User name="Safwan" uid={101} />
       <User name="Ahad" uid={102} />
 
       <hr />
 
-      {/* FORM: Student registration */}
-      <h3>Student Registration Form</h3>
+      {/* Form example */}
       <MyForm />
 
       <hr />
 
-      {/* LIST: Display list of students */}
-      <h3>Student List</h3>
+      {/* List example */}
       <StudentList />
 
       <hr />
 
-      {/* EVENT: Button click */}
-      <h3>Event Handling</h3>
+      {/* Event example */}
       <EventDemo />
     </div>
   );
 }
 
-// PROPS example: Receiving data from parent component
+// Props: receiving data from parent component
 function User(props) {
   return (
     <p>
@@ -48,7 +45,7 @@ function User(props) {
   );
 }
 
-// FORM example: Collecting student input
+// Form: collecting user input
 function MyForm() {
   return (
     <form>
@@ -59,7 +56,7 @@ function MyForm() {
   );
 }
 
-// LIST example: Rendering multiple students dynamically
+// List: rendering multiple values using map()
 function StudentList() {
   const students = ["Safwan", "Ahad", "Razi"];
 
@@ -72,7 +69,7 @@ function StudentList() {
   );
 }
 
-// EVENT example: Handling button click
+// Event: handling button click
 function EventDemo() {
   function show() {
     alert("Button Clicked");
