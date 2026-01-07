@@ -1,0 +1,38 @@
+
+ <!-- #JavaScript Event Handling & DOM Manipulation -->
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Event Handling</title>
+
+  <script>
+    // Function to change text on button click
+    function changeText() {
+      document.getElementById("msg").innerHTML =
+        "Button Clicked! Content Changed.";
+    }
+
+    // Function to change background color
+    function changeColor() {
+      document.body.style.backgroundColor = "lightblue";
+    }
+  </script>
+</head>
+
+<body>
+
+  <h2>JavaScript Event Handling and DOM Manipulation</h2>
+
+  <p>Click the buttons below to see dynamic changes:</p>
+
+  <!-- Event handling buttons -->
+  <button onclick="changeText()">Change Text</button>
+  <button onclick="changeColor()">Change Background</button>
+
+  <br><br>
+
+  <!-- Dynamic content -->
+  <p id="msg">Initial Content</p>
+
+</body>
+</html>
